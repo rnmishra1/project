@@ -1,0 +1,41 @@
+{% extends "login/header.html" %}
+
+{% block content %}
+
+<div class ='col-sm-6 col-sm-offset-3'>
+<h3>यहां अपना विवरण दर्ज करें</h3><br>
+
+<form method="POST" action="">
+{% csrf_token %}
+<div class="form-group">
+    <label for="first_name">आपके नाम का पहला भाग</label>
+    <input type="text" name = 'first_name' class="form-control" id="first_name" placeholder="First Name">
+</div>
+<div class="form-group">
+    <label for="last_name">आपके नाम का अंतिम भाग</label>
+    <input type="text" name = 'last_name' class="form-control" id="last_name" placeholder="Last Name">
+</div>
+<div class="form-group">
+    <label for="contact">मोबाइल नंबर</label>
+    <input type="text" name = 'contact' class="form-control" id="contact" placeholder="Mobile Number">
+</div>
+<div class="form-group">
+    <label for="address">पूरा पता</label>
+    <input type="text" name = 'address' class="form-control" id="address" placeholder="Address">
+</div>
+<div class="form-group">
+    <label for="start_date">कार्य के लिए उपलब्धता की अवधि की शुरुआत तिथि</label>
+    <input type="date" name = 'start_date' class="form-control" id="start_date" placeholder="Starting date of availability">
+</div>
+<div class="form-group">
+    <label for="end_date">कार्य के लिए उपलब्धता की अवधि की समाप्ति तिथि</label>
+    <input type="date" name = 'end_date' class="form-control" id="end_date" placeholder="Ending date of availability">
+</div>
+<div class="form-group">
+    <label for="skills">कौशल और क्षमताएं</label>
+    <input type="text" name = 'skills' class="form-control" id="skills" placeholder="Skills">
+</div>
+<button type="submit" name = 'save_changes'>परिवर्तनों को सुरक्षित करें</button>
+</form>
+</div>
+{% endblock %}
